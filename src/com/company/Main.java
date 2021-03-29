@@ -34,6 +34,8 @@ public class Main
                       ejercicio3();
                       break;
                   case 4:
+                      ejercicio4();
+                      break;
                   case 5:
                   case 0:
                       System.out.println("Adios !");
@@ -144,6 +146,33 @@ public class Main
 
     }
 
+
+    public static void ejercicio4()
+    {
+        //Scanner scanDatos = new Scanner(System.in);
+        cuentaDeBanco cuentaPrueba = new cuentaDeBanco();
+
+        cuentaPrueba.setBalanceUsuario(15000);
+        cuentaPrueba.setIdUsuario();
+        cuentaPrueba.setNombreUsuario("Joaquin");
+        cuentaPrueba.setApellidoUsuario("Alfonso");
+
+        cuentaPrueba.observarCuenta();
+
+        cuentaPrueba.depositarDinero();
+
+        cuentaPrueba.observarCuenta();
+
+
+        cuentaPrueba.retirarDinero();
+
+        cuentaPrueba.observarCuenta();
+
+
+
+
+
+    }
 }
 
 
