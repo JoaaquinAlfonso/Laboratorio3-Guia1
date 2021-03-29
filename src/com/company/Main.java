@@ -30,8 +30,9 @@ public class Main
                   case 2:
                       ejercicio2();
                       break;
-
                   case 3:
+                      ejercicio3();
+                      break;
                   case 4:
                   case 5:
                   case 0:
@@ -90,6 +91,7 @@ public class Main
     }
 
     public static void ejercicio2()
+
     {
         //Scanner scanEmpleado = new Scanner(System.in);
 
@@ -125,6 +127,23 @@ public class Main
         System.out.println("Salario anual "+salarioAnual); //Muestreo
 
     }
+
+
+    public static void ejercicio3()
+    {
+        itemDeVenta itemNuevo = new itemDeVenta(); //Instancio el objeto en "itemNuevo"
+
+        itemNuevo.setCantidadItem(13);
+        itemNuevo.setDescripcionItem("Cortina de baño 2 x 3 mts");
+        itemNuevo.setIdItem(77851);                                    //Le asigno datos pertinentes
+        itemNuevo.setPrecioUnitItem(350);
+        itemNuevo.setPrecioTotal(); //Calculado como precio unitario * cantidad
+
+        itemNuevo.verItem(); //Muestro el item
+
+
+    }
+
 }
 
 
