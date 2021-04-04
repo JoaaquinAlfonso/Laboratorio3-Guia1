@@ -37,6 +37,8 @@ public class Main
                       ejercicio4();
                       break;
                   case 5:
+                      ejercicio5();
+                      break;
                   case 0:
                       System.out.println("Adios !");
                       break;
@@ -150,13 +152,16 @@ public class Main
     public static void ejercicio4()
     {
         //Scanner scanDatos = new Scanner(System.in);
-        cuentaDeBanco cuentaPrueba = new cuentaDeBanco();
+        cuentaDeBanco cuentaPrueba = new cuentaDeBanco("Alfonso","Joaquin",15000);
+        cuentaPrueba.setIdUsuario();
+
+        /*
 
         cuentaPrueba.setBalanceUsuario(15000);
-        cuentaPrueba.setIdUsuario();
+
         cuentaPrueba.setNombreUsuario("Joaquin");
         cuentaPrueba.setApellidoUsuario("Alfonso");
-
+*/
         cuentaPrueba.observarCuenta();
 
         cuentaPrueba.depositarDinero();
@@ -173,6 +178,68 @@ public class Main
 
 
     }
+
+    public static void ejercicio5()
+    {
+        Scanner scanHorario = new Scanner(System.in);
+        int flag;
+        int horaAux = 0,horaMinutos = 0,horaSegundos = 0;
+
+        do
+        {
+            flag = 0;
+            System.out.println("Ingrese la hora");
+            horaAux = scanHorario.nextInt();
+
+            if (horaAux > 23 || horaAux < 0 )
+            {
+                System.out.println("Hora invalida");
+                flag = 1;
+
+            }
+
+            if (flag == 0)
+            {
+
+                System.out.println("Ingrese el o los minutos");
+                horaMinutos = scanHorario.nextInt();
+
+                if (horaMinutos > 59 || horaMinutos < 0)
+                {
+                    System.out.println("Minuto/s invalido/s");
+                    flag = 1;
+                }
+
+            }
+
+            if (flag == 0)
+            {
+                System.out.println("Ingrese el o los segundos");
+                horaSegundos = scanHorario.nextInt();
+
+                if (horaSegundos > 59 || horaSegundos < 0)
+                {
+                    System.out.println("Segundo/s invalido/s");
+                    flag = 1;
+                }
+
+            }
+
+
+        }while (flag == 1);
+
+        Hora horarioNuevo = new Hora(horaAux,horaMinutos,horaSegundos);
+
+        horarioNuevo.verLaHora();
+        horarioNuevo.retrocederUnSegundo();
+        horarioNuevo.avanzarUnSegundo();
+        horarioNuevo.verLaHora();
+
+
+    }
+
+
+
 }
 
 

@@ -9,6 +9,12 @@ public class cuentaDeBanco {
     private double balanceUsuario;
 
 
+    public cuentaDeBanco(String apellidoUsuario, String nombreUsuario, double balanceUsuario) {
+        this.apellidoUsuario = apellidoUsuario;
+        this.nombreUsuario = nombreUsuario;
+        this.balanceUsuario = balanceUsuario;
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }
